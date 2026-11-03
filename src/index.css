@@ -4,22 +4,22 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-800 antialiased;
+    @apply bg-slate-100 text-brand-dark antialiased;
   }
 }
 
-/* Hide scrollbar for clean mobile look */
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* Custom Animations */
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .animate-slide-up {
   animation: slideUp 0.4s ease-out forwards;
 }
